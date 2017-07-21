@@ -1,91 +1,106 @@
-
-	<div class="header">
-		<label>Dealer Name : </label>
-      <select ng-model="selectedDealer" ng-change="selectedItemChanged(selectedDealer)">
-      	 <option value="">---Please select Dealer---</option>
-        <option ng-repeat="x in names">{{x}}</option>
-      </select>
-    </div>
-    <div ng-if="selectedDealer" class="mis_data_form">
-    	<div class="center">
-    		 <p>Welcome :  {{selectedDealer}}</p>
-    	</div>
-    	 <div>
-            <form ng-submit="submit(details)" class="form_classA">
-            <p class="form_classB">
-				<label class="form_classC">Zone :</label>
-				<input type="text" ng-model="details.zone" class="form_classD">
-			</p><br>
-			<p class="form_classB">
-				<label class="form_classC">Region :</label>
-				<input type="text" ng-model="details.region" class="form_classD">
-			</p><br>
-			<p class="form_classB">
-				<label class="form_classC">Area :</label>
-				<input type="text" ng-model="details.area" class="form_classD">
-			</p><br>
-			<p class="form_classB">
-				<label class="form_classC">Branch :</label>
-				<input type="text" ng-model="details.branch" class="form_classD">
-			</p><br>
-			<p class="form_classB">
-				<label class="form_classC">manufacture :</label>
-				<input type="text" ng-model="details.manufactures" class="form_classD">
-			</p><br>
-			<p class="form_classB">
-				<label class="form_classC">Dealer Counter Area :</label>
-				<input type="text" ng-model="details.counterArea" class="form_classD">
-			</p><br>
-			<p class="form_classB">
-				<label class="form_classC">Outlet Counter Type  :</label>
-				<input type="text" ng-model="details.outletCountType" class="form_classD">
-			</p><br>
-			<!-- <p class="form_classB">
-				<label class="form_classC">Outlet Counter Type :</label>
-					<select ng-model="details.outlet_counter_area">
-        				<option ng-repeat="x in outlet_type" class="form_classD">{{x}}</option>
-      				</select>
-			</p><br> -->
-			<p class="form_classB">
-				<label class="form_classC"> Status for Dealer :</label>
-				<input type="text" ng-model="details.dealerStatus" class="form_classD">
-			</p><br>
-			<p class="form_classB">
-				<label class="form_classC">Previous Month Dealer sale :</label>
-				<input type="text" ng-model="details.previousSales" class="form_classD">
-			</p><br>
-			<p class="form_classB">
-				<label class="form_classC"> Previous Month Chola Sale :</label>
-				<input type="text" ng-model="details.cholaSales" class="form_classD">
-			</p><br>
-			<p class="form_classB">
-				<label class="form_classC">Previous Month chola Market Share :</label>
-				<input type="text" ng-model="details.cholaMarketShare" class="form_classD">
-			</p><br>
-			<p class="form_classB">
-				<label class="form_classC">Product Catagory :</label>
-				<input type="text" ng-model="details.productCatagory" class="form_classD">
-			</p><br>
-			<p class="form_classB">
-				<label class="form_classC">Dealer over all sale :</label>
-				<input type="text" ng-model="details.dealerOverallSale" class="form_classD">
-			</p><br>
-			<p class="form_classB">
-				<label class="form_classC">Chola Sale Number from dealer :</label>
-				<input type="text" ng-model="details.cholaSaleNumberDealer" class="form_classD">
-			</p><br>
-			<p class="form_classB">
-				<label class="form_classC">Counter over all Sale Number :</label>
-				<input type="text" ng-model="details.counterOverallSale" class="form_classD">
-			</p><br>
-			<p class="form_classB">
-				<label class="form_classC">Chola Sale Number from Counter :</label>
-				<input type="text" ng-model="details.cholaSaleNumberCounter" class="form_classD">
-			</p><br>
-			<div class="center">
-				<input type="submit" id="submit" value="Submit"/>
-			</div>              
-            </form>
-        </div>
-
-    </div>
+<div class="header">
+   <label>Dealer Name : </label>
+   <select ng-model="selectedDealer" ng-change="selectedItemChanged(selectedDealer)">
+      <option value="">---Please select Dealer---</option>
+      <option ng-repeat="x in names">{{x}}</option>
+   </select>
+</div>
+<div ng-if="selectedDealer" class="mis_data_form">
+   <div class="center">
+      <p>Welcome :  {{selectedDealer}}</p>
+   </div>
+   <form ng-submit="submit(details)" class="col-md-12">
+      <div class="col-md-6 form_classA">
+         <p class="form_classB">
+            <label class="form_classC">Zone :</label>
+            <input type="text" ng-model="details.zone" class="form_classD" disabled>
+         </p>
+         <br>
+         <p class="form_classB">
+            <label class="form_classC">Region :</label>
+            <input type="text" ng-model="details.region" class="form_classD" disabled>
+         </p>
+         <br>
+         <p class="form_classB">
+            <label class="form_classC">Area :</label>
+            <input type="text" ng-model="details.area" class="form_classD" disabled>
+         </p>
+         <br>
+         <p class="form_classB">
+            <label class="form_classC">Branch :</label>
+            <input type="text" ng-model="details.branch" class="form_classD" disabled>
+         </p>
+         <br>
+         <p class="form_classB">
+            <label class="form_classC">manufacture :</label>
+            <input type="text" ng-model="details.manufactures" class="form_classD" disabled>
+         </p>
+         <br>
+         <p class="form_classB">
+            <label class="form_classC">Dealer Counter Area :</label>
+            <input type="text" ng-model="details.counterArea" class="form_classD" disabled>
+         </p>
+         <br>
+          <p class="form_classB">
+            <label class="form_classC">Outlet Counter Type :</label>
+               <select ng-model="details.outletCountType" class="option_box">
+                  <option ng-repeat="x in outlet_type" class="form_classD">{{x}}</option>
+               </select>
+         </p>
+         <br>
+         <p class="form_classB">
+            <label class="form_classC"> Status for Dealer :</label>
+            <input type="text" ng-model="details.dealerStatus" class="form_classD">
+         </p>
+         <br>
+      </div>
+      <div class="col-md-6 form_classA">
+         <p class="form_classB">
+            <label class="form_classC">Previous Month Dealer sale :</label>
+            <input type="text" ng-model="details.previousSales" class="form_classD">
+         </p>
+         <br>
+         <p class="form_classB">
+            <label class="form_classC"> Previous Month Chola Sale :</label>
+            <input type="text" ng-model="details.cholaSales" class="form_classD">
+         </p>
+         <br>
+         <p class="form_classB">
+            <label class="form_classC">Previous Month chola Market Share :</label>
+            <input type="text" ng-model="details.cholaMarketShare" class="form_classD">
+         </p>
+         <br>
+         <p class="form_classB">
+            <label class="form_classC">Product Catagory :</label>
+               <select ng-model="details.productCatagory" required class="option_box">
+                  <option ng-repeat="x in product_catagory" class="form_classD">{{x}}</option>
+               </select>
+         </p>
+         <br>
+         <p class="form_classB">
+            <label class="form_classC">Dealer over all sale :</label>
+            <input type="text" ng-model="details.dealerOverallSale" class="form_classD" required > 
+         </p>
+         <br>
+         <p class="form_classB">
+            <label class="form_classC">Chola Sale Number from dealer :</label>
+            <input type="text" ng-model="details.cholaSaleNumberDealer" class="form_classD" required>
+         </p>
+         <br>
+         <p class="form_classB">
+            <label class="form_classC">Counter over all Sale Number :</label>
+            <input type="text" ng-model="details.counterOverallSale" class="form_classD">
+         </p>
+         <br>
+         <p class="form_classB">
+            <label class="form_classC">Chola Sale Number from Counter :</label>
+            <input type="text" ng-model="details.cholaSaleNumberCounter" class="form_classD">
+         </p>
+         <br>          
+      </div>
+      <div class="center">
+         <input type="submit" id="submit" value="Submit"/>
+      </div>
+   </form>
+</div>
+</div>
